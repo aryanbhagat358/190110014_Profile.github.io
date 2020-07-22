@@ -1,0 +1,352 @@
+/* CSS Variables */
+:root{
+   --primary:#ddd;
+   --dark:#333;
+   --light:#fff;
+   --shadow:0 1px 5px rgba(104, 104, 104, .8)
+}
+html{
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+   color: var(--dark);
+   scroll-behavior: smooth;
+
+}
+
+body{
+   background: #ccc;
+   margin: 30px 50px;
+   /* line-height:1.1rem; */
+
+
+}
+#pagetitle{
+   font-family: 'Condiment', cursive;
+   font-size: 2rem;
+}
+
+.btn{
+   background: var(--dark);
+   color: var(--light);
+   padding: .6rem 1.3rem;
+   text-decoration: none;
+   border: 0;
+
+}
+
+img{
+   max-width: 100%;
+
+}
+
+.wrapper{
+display: grid;
+grid-gap: 20px;
+}
+
+/* navigation */
+ .main-nav ul{
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+
+ }
+ .main-nav a{
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: .8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+
+ }
+
+ .main-nav a:hover{
+   background: var(--dark);
+   color: var(--light);
+
+}
+
+/* ?top container  */
+.top-container{
+   display: grid;
+grid-gap:20px ;
+grid-template-areas: 
+'showcase showcase top-box-a'
+'showcase showcase top-box-b' ;
+
+}
+
+/* showcase */
+.showcase{
+   grid-area: showcase;
+min-height: 400px;
+background: url(services.png);
+background-size: cover;
+background-position: center;
+padding: 3rem;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+box-shadow: var(--shadow);
+
+
+}
+
+.showcase h1{
+   font-size: 4rem;
+   margin-bottom: 0;
+   color: var(--light);
+
+}
+
+.showcase p{
+   font-size:1.3rem;
+   margin-top: 0;
+   color: var(--light);
+}
+
+/*Top box  */
+
+.Top-box{
+   background: var(--primary);
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   box-shadow: var(--shadow);
+   padding: 1.5rem;
+
+}
+
+.top-box .price{
+   font-size: 2.5rem;
+
+}
+
+.top-box-a{
+   grid-area: top-box-a;
+
+}
+.top-box-b{
+   grid-area: top-box-b;
+
+}
+
+.boxes{
+   display: grid;
+      grid-gap:20px;
+      grid-template-columns: repeat(3,300px);
+      grid-template-columns: repeat(3,minmax(200px,1fr));
+      /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+
+}
+/* @media (min-width: 600px) {
+   .boxes { grid-template-columns: repeat(2, 1fr); }
+ } */
+
+.box{
+   background: var(--primary);
+   text-align: center;
+   padding: 1.5rem 2rem;
+   box-shadow: var(--shadow);
+
+   transition-property: var(--primary);
+   transition-duration: .3s;
+   transition-timing-function: ease-out;
+   transition-delay: 0.1s;
+
+}
+.box:hover{
+   background-color:rgb(190, 190, 190)
+}
+
+
+/* Info */
+
+.info{
+   /* height: 400px; */
+   background: var(--primary);
+   box-shadow: var(--shadow);
+   display: grid;
+   grid-gap: 20px;
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   margin-top: 30px;
+   text-align: left;
+
+}
+.info p{
+   padding: 5px;
+}
+#abouttxt{
+   padding: 40px;
+}
+#home{
+   padding: 40px;
+}
+.bold{
+   font-weight: bold;
+}
+.info2 {
+   background: var(--primary);
+   box-shadow: var(--shadow);
+   display: grid;
+   grid-gap: 20px;
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+ margin-top: 30px;
+   text-align: left;
+
+}
+
+#contactform{
+   width: 70%;
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   flex-direction: column;
+   /* text-align: center; */
+   margin: auto;
+   margin-top: 100px;
+}
+
+
+
+
+@media screen and (min-width: 786px) and (max-width: 991px) {
+   
+
+  
+}
+
+@media screen and (min-width: 600px) and (max-width:786px) {
+   .boxes{
+      display: grid;
+         grid-gap:20px;
+         grid-template-columns: repeat(2,300px);
+         grid-template-columns: repeat(2,minmax(200px,1fr));
+         /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+   
+   }
+   
+   
+   .box{
+      background: var(--primary);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      box-shadow: var(--shadow);
+   
+   
+   }
+   .info{
+      /* height: 400px; */
+      background: var(--primary);
+      box-shadow: var(--shadow);
+      /* display: grid; */
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+      margin-top: 30px;
+      text-align: left;
+   
+  
+   }
+   
+  
+}
+@media screen and (min-width: 400px) and (max-width:600px) {
+   .boxes{
+      display: grid;
+         grid-gap:20px;
+         grid-template-columns: repeat(1,300px);
+         grid-template-columns: repeat(1,minmax(200px,1fr));
+         /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+   
+   }
+   
+   
+   .box{
+      background: var(--primary);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      box-shadow: var(--shadow);
+   
+   
+   }
+   .info{
+      /* height: 400px; */
+      background: var(--primary);
+      box-shadow: var(--shadow);
+      /* display: grid; */
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+      margin-top: 30px;
+      text-align: left;
+   
+  
+   }
+  
+}
+ @media only screen and (max-width: 400px) {
+   body {
+     padding: 0;
+   }
+   .info p{
+      padding: 5px;
+   }
+   #about{
+      padding: 5px;
+   }
+   #home{
+      padding: 5px;
+   }
+   .info{
+      /* height: 400px; */
+      background: var(--primary);
+      box-shadow: var(--shadow);
+      /* display: grid; */
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+      margin-top: 30px;
+      text-align: left;
+   
+  
+   }
+   .info2 {
+      background: var(--primary);
+      box-shadow: var(--shadow);
+      /* display: grid; */
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    margin-top: 30px;
+      text-align: left;
+   
+   }
+   .boxes{
+      display: grid;
+         grid-gap:20px;
+         grid-template-columns: repeat(1,300px);
+         grid-template-columns: repeat(1,minmax(200px,1fr));
+         /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+   
+   }
+   
+   
+   .box{
+      background: var(--primary);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      box-shadow: var(--shadow);
+
+ } 
